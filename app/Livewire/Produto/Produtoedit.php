@@ -9,6 +9,7 @@ use Livewire\Component;
 class Produtoedit extends Component
 {
     public $nome;
+    public $praso_v;
     public $valor;
     public $observacoes;
     public $categorias;
@@ -26,7 +27,11 @@ class Produtoedit extends Component
         }
         $this->produtoID = $produto->id;
         $this->categorias = $produto->categorias;
+        $this->praso_v = $produto->praso_validade;
+        $this->observacoes = $produto->observacoes;
+        $this->cor = $produto->cor;
         $this-> nome = $produto->nome;
+        $this->peso = $produto->peso_kg;
         $this-> valor = $produto->valor;
         $this-> qtd_atual = $produto->qtd_atual;
         $this-> qtd_min = $produto->qtd_min;
@@ -41,6 +46,11 @@ class Produtoedit extends Component
         
         $produto->nome = $this->nome;
         $produto->valor = $this->valor;
+        $produto->praso_validade = $this->praso_v;
+        $produto->cor = $this->cor;
+        $produto->peso_kg = $this->peso;
+        $produto->observacoes = $this->observacoes;
+        $produto->categorias = $this->categorias;
         $produto->qtd_atual = $this->qtd_atual;
         $produto->qtd_min = $this->qtd_min;
 

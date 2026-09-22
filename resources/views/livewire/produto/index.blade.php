@@ -23,6 +23,8 @@
       <th scope="col">categorias</th>
       <th scope="col">Qtd. Estoque</th>
       <th scope="col">Qtd. Minima</th>
+      <th>editar</th>
+      <th>excluir</th>
     </tr>
   </thead>
   <tbody>
@@ -41,7 +43,11 @@
       <td><button wire:click='delete({{ $p->id }})' class="btn btn-sm btn-danger">delete</button></td>
     </tr>
     @endforeach
+
   </tbody>
 </table>
+
+<a href="{{ route('dashboard') }}" class="btn btn-secondary">Pagina inicial</a>
+<a href="{{ route('produto.create') }}" class="btn btn-success"><i class="bi bi-plus-square-fill"></i> adicionar produto</a>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 </div>
